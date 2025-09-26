@@ -50,7 +50,7 @@ Laragon adalah _platform_ pengembangan web yang ringan dan portable. Laragon men
 
 <img width="934" height="640" alt="Klik Start All dan Root" src="https://github.com/user-attachments/assets/3b03841f-5615-48c0-9bb9-461486b1701d" />
 
-<img width="782" height="359" alt="Folder praktikum-1" src="https://github.com/user-attachments/assets/e1570f2d-46cf-43ed-8ac7-0bdd5cad4dd5" />
+<img width="886" height="232" alt="Folder praktikum-1" src="https://github.com/user-attachments/assets/6863bd3f-b7bf-4e5c-8a37-da489319ecfe" />
 
 ## B. Bagian 2: Membangun Aplikasi Pendaftaran Event
 
@@ -206,10 +206,41 @@ b.	Perulangan `foreach` digunakan untuk menampilkan setiap baris data. Data ters
 
 3) Mencoba mengisi _form_ dengan email atau tanggal yang salah dan perhatikan pesan error yang muncul.
 
+- Mengisi Tanggal Lahir dengan Format yang Salah
+
 <img width="1920" height="1080" alt="Mengisi Tanggal Lahir dengan Format yang Salah" src="https://github.com/user-attachments/assets/8020a152-3123-4095-aacc-720576f79041" />
+
+- Pesan Error terhadap Penulisan Tanggal Lahir
 
 <img width="1920" height="1080" alt="Pesan Error terhadap Tanggal Lahir" src="https://github.com/user-attachments/assets/b8ac0f4e-e5a6-410b-aa3a-bd4936d8e2f2" />
 
+- Mengisi Email dengan Format yang Salah
+
+<img width="1920" height="1080" alt="Mengisi Email dengan Format yang Salah" src="https://github.com/user-attachments/assets/2d005fb0-e874-4a82-8e31-d4c87f242838" />
+
+- Pesan Error terhadap Penulisan Email
+
+<img width="1920" height="1080" alt="Pesan Error terhadap Email" src="https://github.com/user-attachments/assets/78f76c70-df41-4413-a217-ae3c86fb25d9" />
+
 4) Setelah berhasil submit, data akan muncul di tabel bawah _form_ dan file **pendaftar.txt** akan terbuat di dalam folder praktikum-1.
-   
+
+<img width="899" height="238" alt="File pendaftar txt" src="https://github.com/user-attachments/assets/31b8cca5-e512-4e2b-9577-43f8d7d8106d" />
+
 ## C. Bagian 3: Pengumpulan Tugas via GitHub
+
+1. Buka folder praktikum-1, lalu klik kanan, pilih **"Show more options"**, dan klik **"Open Git Bash here**.
+   
+2. Inisialisasi Git untuk membuat repositori Git baru di folder lokal dengan `git init`.
+
+3. Menghubungkan repositori lokal ke GitHub dengan perintah berikut ini. Baris pertama menambahkan alamat repositori GitHub sebagai _remote_ dengan nama `origin`. Baris kedua mengganti nama cabang utama menjadi `main`.
+
+`git remote add origin https://github.com/revalinaadelia/praktikum-php-dasar.git`
+`git branch -M main`
+
+4. Lakukan commit dan Push dengan menjalankan perintah ini. 
+
+`git add .` -> menambahkan semua perubahan ke _staging_.
+`git commit -m "feat: Aplikasi pendaftaran event selesai"` -> menyimpan perubahan dengan pesan tertentu.
+`git push -u origin main` -> mengunggah kode ke repositori GitHub di cabang `main`.
+
+<img width="1010" height="661" alt="Menghubungkan Lokal ke GitHub" src="https://github.com/user-attachments/assets/9bd9c0ee-5ae2-4470-967f-dd4fab67cb7a" />
