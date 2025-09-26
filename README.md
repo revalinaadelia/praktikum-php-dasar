@@ -7,7 +7,7 @@
 - **Mata Kuliah**      : Pemrograman Berbasis Web (A)
 - **Dosen Pengampu**   : Adi Wahyu Pribadi, S.Si., M.Kom.
 
-Aplikasi ini dibuat untuk memenuhi tugas praktikum dasar PHP. Aplikasi ini merupakan form pendaftaran sederhana untuk sebuah event aktif.
+Aplikasi ini dibuat untuk memenuhi tugas praktikum dasar PHP. Aplikasi ini merupakan _form_ pendaftaran sederhana untuk sebuah event aktif.
 
 ## Deskripsi & Fitur
 
@@ -32,15 +32,17 @@ Laragon adalah _platform_ pengembangan web yang ringan dan portable. Laragon men
 
 3)	Setelah halaman terbuka, pilih **Download Laragon 2025 v8.2.3 – Full (229 MB)**. File installer akan otomatis terunduh ke laptop.
 
+<img width="1068" height="622" alt="Laragon pada Windows" src="https://github.com/user-attachments/assets/8e3b389b-1e03-4819-9971-ad33e1e15e71" />
+
 4)	Tunggu hingga proses unduhan selesai, lalu buka file installer dengan mengklik ikon panah pada hasil unduhan.
 
-<img width="1365" height="727" alt="Halaman Resmi Laragon" src="https://github.com/user-attachments/assets/765f5fde-5442-4bf8-982f-45e96d64afde" />
+<img width="316" height="68" alt="Jalankan File Laragon  exe" src="https://github.com/user-attachments/assets/2e6922aa-690d-42fd-a1fc-e9f5968c6c2e" />
 
 5)	Jendela instalasi Laragon akan muncul. Ikuti langkah-langkah instalasi dengan mengklik tombol **Next** dan **Install** pada setiap tahap hingga selesai. Akhiri dengan mengklik tombol **Finish**.
 
 <img width="406" height="319" alt="Klik Install pada Hasil Download" src="https://github.com/user-attachments/assets/c432e237-6194-434c-9403-e1c9f19d01bf" />
 
-<img width="406" height="319" alt="Klik Install pada Hasil Download" src="https://github.com/user-attachments/assets/15559f1a-a70f-4a76-a94c-19e609b8345e" />
+<img width="402" height="311" alt="Klik Finish setelah Install" src="https://github.com/user-attachments/assets/dc85cff0-14b4-4fb1-b624-e09d47ea7293" />
 
 6)	Setelah instalasi selesai, buka Laragon melalui menu _Search_ di Windows. Pilih **“Start All”** agar _service_ Apache (Web Server) dan MySQL (Database Server) aktif secara otomatis. Selanjutnya, klik tombol **"Root"** di jendela Laragon untuk membuka File Explorer pada folder C:\laragon\www. Buat folder  baru dengan nama **‘praktikum-1’** di dalam folder tersebut.
 
@@ -168,9 +170,9 @@ Letakkan kode PHP ini di bawah tag **<body>** dan sebelum tag **<h1>**. Kode ber
 
 <img width="609" height="351" alt="Menampilkan Pesan Status" src="https://github.com/user-attachments/assets/5656c79c-a7be-4296-9130-d749675ad62a" />
 
-- **if (!empty($status_message))**: kondisi ini memeriksa apakah variable $status_message berisi data. Jika iya, maka pesan tersebut ditampilkan di dalam tag **<p>** dengan class **success**. Umumnya pesan ini menandakan proses berhasil dilakukan.
+- **if (!empty($status_message))** : kondisi ini memeriksa apakah variable **$status_message** berisi data. Jika iya, maka pesan tersebut ditampilkan di dalam tag **<p>** dengan class **success**. Umumnya pesan ini menandakan proses berhasil dilakukan.
 
-- **if (!empty($error_messages))**: kondisi ini memeriksa apakah terdapat pesan kesalahan di dalam array **$error_messages**. Jika ada, maka seluruh pesan kesalahan ditampilkan di dalam elemen **<u1>** menggunakan perulangan **foreach**. Dengan demikian, pengguna dapat mengetahui kesalahan apa yang terjadi.
+- **if (!empty($error_messages))** : kondisi ini memeriksa apakah terdapat pesan kesalahan di dalam array **$error_messages**. Jika ada, maka seluruh pesan kesalahan ditampilkan di dalam elemen **<u1>** menggunakan perulangan **foreach**. Dengan demikian, pengguna dapat mengetahui kesalahan apa yang terjadi.
 
 - Dengan cara ini, sistem dapat memberikan umpan balik yang jelas, baik berupa konfirmasi keberhasilan maupun daftar kesalahan yang harus diperbaiki.
 
