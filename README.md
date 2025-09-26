@@ -19,6 +19,7 @@ Aplikasi ini mencakup implementasi dari beberapa konsep dasar PHP, yaitu:
 - **Operasi File**: Menyimpan setiap pendaftar yang valid ke dalam file `pendaftar.txt`.
 - **Menampilkan Data**: Membaca data dari `pendaftar.txt` dan menampilkannya dalam bentuk tabel.
 
+---
 ## A. Bagian 1: Instalasi & Konfigurasi Laragon
 
 Laragon adalah _platform_ pengembangan web yang ringan dan portable. Laragon menyediakan berbagai layanan seperti Apache, MySQL, PHP, dan Node.js yang memudahkan pengembang dalam membangun aplikasi web secara lokal. Berikut langkah-langkah instalasi Laragon pada sistem operasi Windows:
@@ -52,6 +53,7 @@ Laragon adalah _platform_ pengembangan web yang ringan dan portable. Laragon men
 
 <img width="886" height="232" alt="Folder praktikum-1" src="https://github.com/user-attachments/assets/6863bd3f-b7bf-4e5c-8a37-da489319ecfe" />
 
+---
 ## B. Bagian 2: Membangun Aplikasi Pendaftaran Event
 
 **1. Membuat File Utama dan Tampilan Form**
@@ -96,6 +98,7 @@ Di bagian ini, kita membuat tampilan awal berupa _form_ pendaftaran menggunakan 
 
 `<button type=”submit”>Daftar Sekarang</button>` dipakai untuk mengirimkan data ke server.
 
+---
 **2. Menambahkan Logika PHP**
 
 Di bagian ini, kita menambahkan kode PHP untuk mengolah data dari _form_ yang sudah dibuat tadi. Tambahkan blok kode PHP ini di paling atas file `index.php`, sebelum `<!DOCTYPE html>`.
@@ -160,6 +163,7 @@ Jika berhasil, pengguna akan melihat pesan seperti:
 
 **Terima kasih, Revalina Adelia! Pendaftaran Anda untuk event Belajar PHP 2025 berhasil**.
 
+---
 **3. Menampilkan Pesan Status dan Daftar Peserta**
 
 **1) Menampilkan Pesan Status dan Pesan Kesalahan**
@@ -192,6 +196,7 @@ b.	Perulangan `foreach` digunakan untuk menampilkan setiap baris data. Data ters
 
 - Fungsi `htmlspecialchars()` digunakan untuk mengamankan tampilan data agar input yang berisi kode HTML tidak dieksekusi sebagai perintah, tetapi tetap ditampilkan sebagai teks biasa.
 
+---
 **4. Pengujian**
 
 1) Buka browser dan akses proyek melalui URL: http://localhost/praktikum-1/.
@@ -226,6 +231,7 @@ b.	Perulangan `foreach` digunakan untuk menampilkan setiap baris data. Data ters
 
 <img width="899" height="238" alt="File pendaftar txt" src="https://github.com/user-attachments/assets/31b8cca5-e512-4e2b-9577-43f8d7d8106d" />
 
+---
 ## C. Bagian 3: Pengumpulan Tugas via GitHub
 
 1. Buka folder praktikum-1, lalu klik kanan, pilih **"Show more options"**, dan klik **"Open Git Bash here**.
@@ -235,12 +241,15 @@ b.	Perulangan `foreach` digunakan untuk menampilkan setiap baris data. Data ters
 3. Menghubungkan repositori lokal ke GitHub dengan perintah berikut ini. Baris pertama menambahkan alamat repositori GitHub sebagai _remote_ dengan nama `origin`. Baris kedua mengganti nama cabang utama menjadi `main`.
 
 `git remote add origin https://github.com/revalinaadelia/praktikum-php-dasar.git`
+
 `git branch -M main`
 
 4. Lakukan commit dan Push dengan menjalankan perintah ini. 
 
 `git add .` -> menambahkan semua perubahan ke _staging_.
+
 `git commit -m "feat: Aplikasi pendaftaran event selesai"` -> menyimpan perubahan dengan pesan tertentu.
+
 `git push -u origin main` -> mengunggah kode ke repositori GitHub di cabang `main`.
 
 <img width="1010" height="661" alt="Menghubungkan Lokal ke GitHub" src="https://github.com/user-attachments/assets/9bd9c0ee-5ae2-4470-967f-dd4fab67cb7a" />
