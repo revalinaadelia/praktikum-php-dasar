@@ -1,4 +1,4 @@
-#PRAKTIKUM 2: APLIKASI PHP DASAR - FORM PENDAFTARAN EVENT 
+# PRAKTIKUM 2: APLIKASI PHP DASAR - FORM PENDAFTARAN EVENT 
 
 Aplikasi ini dibuat untuk memenuhi tugas praktikum dasar PHP. Aplikasi ini merupakan form pendaftaran sederhana untuk sebuah event aktif.
 
