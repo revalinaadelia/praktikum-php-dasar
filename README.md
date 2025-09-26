@@ -1,4 +1,4 @@
-# PRAKTIKUM 2: APLIKASI PHP DASAR - FORM PENDAFTARAN EVENT 
+# PRAKTIKUM 1: APLIKASI PHP DASAR - FORM PENDAFTARAN EVENT 
 
 # 📃 Identitas Diri
 
@@ -19,13 +19,42 @@ Aplikasi ini mencakup implementasi dari beberapa konsep dasar PHP, yaitu:
 - **Operasi File**: Menyimpan setiap pendaftar yang valid ke dalam file `pendaftar.txt`.
 - **Menampilkan Data**: Membaca data dari `pendaftar.txt` dan menampilkannya dalam bentuk tabel.
 
-## A. Bagian 1: Instalasi $ Konfigurasi Laragon
+## A. Bagian 1: Instalasi & Konfigurasi Laragon
+
+      Laragon adalah _platform_ pengembangan web yang ringan dan portable. Laragon menyediakan berbagai layanan seperti Apache, MySQL, PHP, dan Node.js yang memudahkan pengembang dalam membangun aplikasi web secara lokal. Berikut langkah-langkah instalasi Laragon pada sistem operasi Windows:
+
+1)	Buka Google Chrome (atau browser lain) lalu ketikkan kata kunci **“Laragon Download”** pada kolom pencarian.
+<img width="1366" height="768" alt="Search Laragon Download" src="https://github.com/user-attachments/assets/8db47e61-42ba-4270-bf21-75f21400c1b3" />
+
+2)	Dari hasil pencarian, pilih halaman resmi **“Download Laragon”** atau buka tautan berikut https://laragon.org/download/.
+
+<img width="1365" height="727" alt="Halaman Resmi Laragon" src="https://github.com/user-attachments/assets/b801f22b-60fa-4509-86e6-633d078c9848" />
+
+3)	Setelah halaman terbuka, pilih **Download Laragon 2025 v8.2.3 – Full (229 MB)**. File installer akan otomatis terunduh ke laptop.
+
+4)	Tunggu hingga proses unduhan selesai, lalu buka file installer dengan mengklik ikon panah pada hasil unduhan.
+
+<img width="1365" height="727" alt="Halaman Resmi Laragon" src="https://github.com/user-attachments/assets/765f5fde-5442-4bf8-982f-45e96d64afde" />
+
+5)	Jendela instalasi Laragon akan muncul. Ikuti langkah-langkah instalasi dengan mengklik tombol **Next** dan **Install** pada setiap tahap hingga selesai. Akhiri dengan mengklik tombol **Finish**.
+
+<img width="406" height="319" alt="Klik Install pada Hasil Download" src="https://github.com/user-attachments/assets/c432e237-6194-434c-9403-e1c9f19d01bf" />
+
+<img width="406" height="319" alt="Klik Install pada Hasil Download" src="https://github.com/user-attachments/assets/15559f1a-a70f-4a76-a94c-19e609b8345e" />
+
+6)	Setelah instalasi selesai, buka Laragon melalui menu _Search_ di Windows. Pilih **“Start All”** agar _service_ Apache (Web Server) dan MySQL (Database Server) aktif secara otomatis. Selanjutnya, klik tombol **"Root"** di jendela Laragon untuk membuka File Explorer pada folder C:\laragon\www. Buat folder  baru dengan nama **‘praktikum-1’** di dalam folder tersebut.
+
+<img width="772" height="676" alt="Buka Laragon" src="https://github.com/user-attachments/assets/b7133bd9-b5a4-486f-aee3-c4cf054b507c" />
+
+<img width="934" height="640" alt="Klik Start All dan Root" src="https://github.com/user-attachments/assets/3b03841f-5615-48c0-9bb9-461486b1701d" />
+
+<img width="782" height="359" alt="Folder praktikum-1" src="https://github.com/user-attachments/assets/e1570f2d-46cf-43ed-8ac7-0bdd5cad4dd5" />
 
 ## B. Bagian 2: Membangun Aplikasi Pendaftaran Event
 
 **1. Membuat File Utama dan Tampilan Form**
 
-Di bagian ini, kita membuat tampilan awal berupa form pendaftaran menggunakan HTML. Caranya dengan membuat folder **praktikum-1**, buat satu file bernama **index.php**. Lalu buka file index.php dan tulis kode HTML berikut untuk membuat form pendaftaran.
+     Di bagian ini, kita membuat tampilan awal berupa _form_ pendaftaran menggunakan HTML. Caranya dengan membuat folder **praktikum-1**, buat satu file bernama **index.php**. Lalu buka file **index.php** dan tulis kode HTML berikut untuk membuat _form_ pendaftaran.
 
 <img width="1112" height="476" alt="Membuat File Utama dan Tampilan Form (1)" src="https://github.com/user-attachments/assets/cd1c538d-b0b4-4e66-abf7-331b44f26168" />
 
@@ -33,150 +62,154 @@ Di bagian ini, kita membuat tampilan awal berupa form pendaftaran menggunakan HT
 
 <img width="222" height="61" alt="Membuat File Utama dan Tampilan Form (3)" src="https://github.com/user-attachments/assets/dfc72190-dbb8-4df7-8342-27e176fe0fe7" />
 
-a. Struktur Dasar HTML
+**a. Struktur Dasar HTML**
 
-   -	Baris **<!DOCTYPE html>** sampai **</html>** adalah kerangka utama halaman web.
+     -	Baris **<!DOCTYPE html>** sampai **</html>** adalah kerangka utama halaman web.
   
-   -	Di bagian **<head>**, ada pengaturan judul halaman, charset (supaya teks bisa terbaca dengan benar), dan CSS untuk mempercantik tampilan.
+     -	Di bagian **<head>**, ada pengaturan judul halaman, charset (supaya teks bisa terbaca dengan benar), dan CSS untuk mempercantik tampilan.
 
-b. CSS Styling
+**b. CSS Styling**
 
-   -	Aturan CSS seperti **body { … } dan .form-group { … }** mengatur tampilan agar lebih rapi.
+     -	Aturan CSS seperti **body { … } dan .form-group { … }** mengatur tampilan agar lebih rapi.
 
-   -	Misalnya, **input[type=”text”] { width: 100%; }** membuat kotak input memanjang sesuai lebar form.
+     -	Misalnya, **input[type=”text”] { width: 100%; }** membuat kotak input memanjang sesuai lebar _form_.
 
-   -	**button { … }** memberi warna biru dan efek klik pada tombol.
+     -	**button { … }** memberi warna biru dan efek klik pada tombol.
 
-c. Form Pendaftaran
+**c. Form Pendaftaran**
 
-   -	Bagian **<form action=”index.php” method=”POST”> … </form>** adalah form yang dipakai untuk   mengirim data ke server.
-   -	Atribut **action=”index.php”** artinya data akan dikirim ke file ini sendiri.
-   -	Atribut **method=”POST”** artinya data akan dikirim ke file ini sendiri.
-   -	Atribut **method=”POST”** artinya data dikirim lewat metode POST (lebih aman dibanding GET, karena data tidak terlihat di URL).
+     -	Bagian **<form action=”index.php” method=”POST”> … </form>** adalah _form_ yang dipakai untuk mengirim data ke server.
+     
+     -	Atribut **action=”index.php”** artinya data akan dikirim ke file ini sendiri.
+     
+     -	Atribut **method=”POST”** artinya data akan dikirim ke file ini sendiri.
+     
+     -	Atribut **method=”POST”** artinya data dikirim lewat metode POST (lebih aman dibanding GET, karena data tidak terlihat di URL).
 
-d. Input Form
+**d. Input Form**
 
-   -	Ada tiga input utama: **Nama Lengkap, Email,** dan **Tanggal Lahir**.
+     -	Ada tiga input utama: **Nama Lengkap, Email,** dan **Tanggal Lahir**.
    
-   -	Semua input diberi atribut required agar wajib diisi sebelum dikirim
+     -	Semua input diberi atribut **required** agar wajib diisi sebelum dikirim.
 
-e. Tombol Kirim
+**e. Tombol Kirim**
 
-   **<button type=”submit”>Daftar Sekarang</button>** dipakai untuk mengirimkan data ke server.
+     **<button type=”submit”>Daftar Sekarang</button>** dipakai untuk mengirimkan data ke server.
 
 **2. Menambahkan Logika PHP**
 
-Di bagian ini, kita menambahkan kode PHP untuk mengolah data dari form yang sudah dibuat tadi. Tambahkan blok kode PHP ini di paling atas file **index.php**, sebelum **<!DOCTYPE html>**.
+     Di bagian ini, kita menambahkan kode PHP untuk mengolah data dari _form_ yang sudah dibuat tadi. Tambahkan blok kode PHP ini di paling atas file **index.php**, sebelum **<!DOCTYPE html>**.
 
 <img width="881" height="683" alt="Menambahkan Logika PHP (1)" src="https://github.com/user-attachments/assets/6ff6e727-bd73-477c-a614-e5c939e715b8" />
 
 <img width="920" height="740" alt="Menambahkan Logika PHP (2)" src="https://github.com/user-attachments/assets/84652af8-0308-410f-a4b5-fa4034d22959" />
 
-a.	Konstanta (Constant)
+**a.	Konstanta (Constant)**
 
--	define(‘NAMA_EVENT’, ‘Belajar PHP 2025’); -> menyimpan nama event.
+      -	**define(‘NAMA_EVENT’, ‘Belajar PHP 2025’);** -> menyimpan nama event.
 
--	define(‘FILE_PENDAFTARAN’, ‘pendaftar.txt’); -> nama file tempat data peserta akan disimpan.
+      -	**define(‘FILE_PENDAFTARAN’, ‘pendaftar.txt’);** -> nama file tempat data peserta akan disimpan.
 
--	Constant dipakai karena nilainya tetap dan tidak akan berubah selama program berjalan.
+      -	Constant dipakai karena nilainya tetap dan tidak akan berubah selama program berjalan.
 
-b.	Variabel Global untuk Status
+**b.	Variabel Global untuk Status**
 
--	$status_message -> untuk menyimpan pesan sukses.
+      -	**$status_message** -> untuk menyimpan pesan sukses.
 
--	$error_messages = [] -> untuk menyimpan pesan error jika ada kesalahan input.
+      -	**$error_messages = []** -> untuk menyimpan pesan error jika ada kesalahan input.
 
-c.	Fungsi Validasi
+**c.	Fungsi Validasi**
 
--	validateEmail($email) -> mengecek apakah email sesuai format standar (pakai regex).
+      -	**validateEmail($email)** -> mengecek apakah email sesuai format standar (pakai regex).
 
--	validate($date) -> mengecek apakah tanggal sesuai format DD-MM-YYYY.
+      -	**validate($date)** -> mengecek apakah tanggal sesuai format **DD-MM-YYYY**.
 
-d.	Cek Metode POST
+**d.	Cek Metode POST**
 
--	if ($_SERVER[“REQUEST_METHOD”] == “POST”) { … } -> memastikan bahwa kode hanya berjalan jika form dikirim.
+      -	**if ($_SERVER[“REQUEST_METHOD”] == “POST”) { … }** -> memastikan bahwa kode hanya berjalan jika _form_ dikirim.
 
--	Artinya, saat pengguna baru membuka halaman tanpa mengisi form, bagian ini tidak dijalankan.
+      -	Artinya, saat pengguna baru membuka halaman tanpa mengisi _form_, bagian ini tidak dijalankan.
 
-e.	Mengambil Data Form
+**e.	Mengambil Data Form**
 
--	Data dari form diambil dengan $_POST[‘nama’], $_POST[‘email’], $_POST[‘tanggal_lahir’].
+      -	Data dari _form_ diambil dengan **$_POST[‘nama’]**, **$_POST[‘email’]**, **$_POST[‘tanggal_lahir’]**.
 
--	Fungsi htmlspecialchars() dipakai untuk mencegah input berbahaya (misalnya script).
+      -	Fungsi **htmlspecialchars()** dipakai untuk mencegah input berbahaya (misalnya script).
 
-f.	Validasi Data
+**f.	Validasi Data**
 
--	Mengecek apakah ada field kosong.
+      -	Mengecek apakah ada _field_ kosong.
 
--	Mengecek format email.
+      -	Mengecek format email.
 
--	Mengecek format tanggal.
+      -	Mengecek format tanggal.
 
--	Jika ada yang salah, pesan error dimasukkan ke array $error_messages.
+      -	Jika ada yang salah, pesan error dimasukkan ke array **$error_messages**.
 
-g.	Menyimpan Data ke File
+**g.	Menyimpan Data ke File**
 
--	Jika tidak ada error, data diformat menjadi string dengan ; sebagai pemisah:
-Nama;Email;TanggalLahir
+      -	Jika tidak ada error, data diformat menjadi string dengan ; sebagai pemisah: **Nama;Email;TanggalLahir**
 
--	Lalu disimpan ke file pendaftar.txt dengan file_put_contents(…, FILE_APPEND).
+      -	Lalu disimpan ke file **pendaftar.txt** dengan **file_put_contents(…, FILE_APPEND)**.
 
--	FILE_APPEND memastikan data baru tidak menimpa data lama, tapi ditambahkan di bawahnya.
+      -	**FILE_APPEND** memastikan data baru tidak menimpa data lama, tapi ditambahkan di bawahnya.
 
-h.	Pesan Sukses
+**h.	Pesan Sukses**
 
-Jika berhasil, pengguna akan melihat pesan seperti:
+      Jika berhasil, pengguna akan melihat pesan seperti:
 
-Terima kasih, Reva! Pendaftaran Anda untuk event Belajar PHP 2025 berhasil.
+      **Terima kasih, Reva! Pendaftaran Anda untuk event Belajar PHP 2025 berhasil**.
 
 **3. Menampilkan Pesan Status dan Daftar Peserta**
 
-1. Menampilkan Pesan Status dan Pesan Kesalahan
+**1. Menampilkan Pesan Status dan Pesan Kesalahan**
 
-Letakkan kode PHP ini di bawah tag <body> dan sebelum tag <h1>. Kode berikut digunakan untuk menampilkan notifikasi berupa pesan sukses maupun daftar kesalahan setelah pengguna melakukan suatu aksi, misalnya pengisian formular:
+     Letakkan kode PHP ini di bawah tag **<body>** dan sebelum tag **<h1>**. Kode berikut digunakan untuk menampilkan notifikasi berupa pesan sukses maupun daftar kesalahan setelah pengguna melakukan suatu aksi, misalnya pengisian formular:
 
 <img width="609" height="351" alt="Menampilkan Pesan Status" src="https://github.com/user-attachments/assets/5656c79c-a7be-4296-9130-d749675ad62a" />
 
--	**if (!empty($status_message))**: kondisi ini memeriksa apakah variable $status_message berisi data.
-Jika iya, maka pesan tersebut ditampilkan di dalam tag **<p>** dengan class success. Umumnya pesan ini menandakan proses berhasil dilakukan.
+      -	**if (!empty($status_message))**: kondisi ini memeriksa apakah variable $status_message berisi data. Jika iya, maka pesan tersebut ditampilkan di dalam tag **<p>** dengan class **success**. Umumnya pesan ini menandakan proses berhasil dilakukan.
 
--	**if (!empty($error_messages))**: kondisi ini memeriksa apakah terdapat pesan kesalahan di dalam array $error_messages.
-Jika ada, maka seluruh pesan kesalahan ditampilkan di dalam elemen **<u1>** menggunakan perulangan **foreach**. Dengan demikian, pengguna dapat mengetahui kesalahan apa yang terjadi.
+      -	**if (!empty($error_messages))**: kondisi ini memeriksa apakah terdapat pesan kesalahan di dalam array **$error_messages**. Jika ada, maka seluruh pesan kesalahan ditampilkan di dalam elemen **<u1>** menggunakan perulangan **foreach**. Dengan demikian, pengguna dapat mengetahui kesalahan apa yang terjadi.
 
--	Dengan car aini, sistem dapat memberikan umpan balik yang jelas, baik berupa konfirmasi keberhasilan maupun daftar kesalahan yang harus diperbaiki.
+      -	Dengan cara ini, sistem dapat memberikan umpan balik yang jelas, baik berupa konfirmasi keberhasilan maupun daftar kesalahan yang harus diperbaiki.
 
+**2. Menampilkan Daftar Peserta**
 
-2. Menampilkan Daftar Peserta
-
-Kode berikut digunakan untuk menampilkan seluruh data peserta yang tersimpan di dalam file teks (misalnya **pendaftar.txt**) dalam bentuk tabel. Perintah ini diletakkan di bawah **<h2>Daftar Peserta yang Sudah Mendaftar</h2>**. 
+     Kode berikut digunakan untuk menampilkan seluruh data peserta yang tersimpan di dalam file teks (misalnya **pendaftar.txt**) dalam bentuk tabel. Perintah ini diletakkan di bawah **<h2>Daftar Peserta yang Sudah Mendaftar</h2>**. 
 
 <img width="979" height="732" alt="Menampilkan Daftar Peserta" src="https://github.com/user-attachments/assets/f4aaec40-859e-457f-8400-ac1e7baf17fe" />
 
--	**file_exists(FILE_PENDAFTARAN)**: digunakan untuk memastikan bahwa file data peserta benar-benar tersedia.
+     -	**file_exists(FILE_PENDAFTARAN)**: digunakan untuk memastikan bahwa file data peserta benar-benar tersedia.
 
 a.	Jika file tersedia, maka seluruh isi file dibaca menggunakan fungsi **file()**. Setiap baris dalam file akan menjadi satu elemen array.
 
 b.	Perulangan **foreach** digunakan untuk menampilkan setiap baris data. Data tersebut dipisahkan dengan fungsi **explode(‘;’, $data)** agar masing-masing informasi (nama, email, tanggal lahir) dapat diproses secara terpisah.
 
--	Data peserta kemudian ditampilkan dalam bentuk baris tabel **<tr>** dan kolom **<td>**. 
+     -	Data peserta kemudian ditampilkan dalam bentuk baris tabel **<tr>** dan kolom **<td>**. 
 
--	Jika file belum tersedia atau kosong, sistem menampilkan pesan “Belum ada pendaftar” sebagai pengganti isi tabel.
+     -	Jika file belum tersedia atau kosong, sistem menampilkan pesan “Belum ada pendaftar” sebagai pengganti isi tabel.
 
--	Fungsi **htmlspecialchars()** digunakan untuk mengamankan tampilan data agar input yang berisi kode HTML tidak dieksekusi sebagai perintah, tetapi tetap ditampilkan sebagai teks biasa.
+     -	Fungsi **htmlspecialchars()** digunakan untuk mengamankan tampilan data agar input yang berisi kode HTML tidak dieksekusi sebagai perintah, tetapi tetap ditampilkan sebagai teks biasa.
 
-## C. Bagian 3: Pengumpulan Tugas via GitHub
-**Tampilan Awal Form**
+**4. Pengujian**
+
+1. Buka browser dan akses proyek melalui URL: http://localhost/praktikum-1/.
 
 <img width="1920" height="1080" alt="Tampilan Awal Form" src="https://github.com/user-attachments/assets/267d60fd-6259-4009-bf81-001a12a68e21" />
 
-**Tampilan setelah Pendaftaran Berhasil**
+2. Mencoba mengisi _form_ dengan data yang benar, lalu submit.
 
 <img width="1920" height="1080" alt="Mengisi Pendaftaran dengan Benar" src="https://github.com/user-attachments/assets/03e83860-9f28-46b7-b431-46a60549cd1d" />
 
 <img width="1920" height="1080" alt="Hasil Sukses setelah Pendaftaran Benar" src="https://github.com/user-attachments/assets/854e5b6d-90ae-4951-90b5-a53cf7d321ff" />
 
-**Contoh Pesan Error Validasi**
+3. Mencoba mengisi form dengan email atau tanggal yang salah dan perhatikan pesan error yang muncul.
 
 <img width="1920" height="1080" alt="Mengisi Tanggal Lahir dengan Format yang Salah" src="https://github.com/user-attachments/assets/8020a152-3123-4095-aacc-720576f79041" />
 
 <img width="1920" height="1080" alt="Pesan Error terhadap Tanggal Lahir" src="https://github.com/user-attachments/assets/b8ac0f4e-e5a6-410b-aa3a-bd4936d8e2f2" />
+
+4. Setelah berhasil submit, data akan muncul di tabel bawah _form_ dan file **pendaftar.txt** akan terbuat di dalam folder praktikum-1.
+   
+## C. Bagian 3: Pengumpulan Tugas via GitHub
